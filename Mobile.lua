@@ -1,3 +1,4 @@
+repeat wait() until game:IsLoaded();
 if game.PlaceId==2753915549 or game.PlaceId==4442272183 or game.PlaceId==7449423635 then 
     if _G.Script_Mode=="PVP"then 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadP.lua",true))()
