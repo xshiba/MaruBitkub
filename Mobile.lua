@@ -24,7 +24,7 @@ local GAG = game.PlaceId == 126884695634066
 local ASTDX = game.GameId == 6057699512
 local days99 = game.GameId == 7326934954
 local ZOmBie = game.GameId == 7750955984
-local FishIt = game.GameId == 121864768012064
+local FishIt = game.GameId == 6701277882
 repeat wait() until game:IsLoaded();
 local CountString = 0
 local MainPack
