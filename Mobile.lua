@@ -9,23 +9,17 @@ local DRIVEEMPIRE = game.PlaceId == 3351674303
 local SOLRNG = game.PlaceId == 15532962292
 local TITAN = game.CreatorId == 17347863
 local AD = game.CreatorId == 34121350
-local MS = game.PlaceId == 10260193230
 local AV = game.CreatorId == 17219742
-local PG = game.CreatorId == 3959677
 local Fish = game.CreatorId == 7381705 or game.PlaceId == 16732694052
-local Jujutsu = game.CreatorId == 15557357
 local AA = game.CreatorId == 10611639
 local BL = game.GameId == 6325068386
 local AC = game.GameId == 7074860883 or game.PlaceId == 87039211657390
-local ARX = game.PlaceId == 72829404259339
-local HT = game.GameId == 7314989375
 local BS = game.GameId == 7436755782 or game.CreatorId == 33720745
 local GAG = game.PlaceId == 126884695634066
 local ASTDX = game.GameId == 6057699512
 local days99 = game.GameId == 7326934954
 local ZOmBie = game.GameId == 7750955984
-local FishIt = game.GameId == 6701277882
-local BAZOo = game.GameId == 8066283370
+local FishIt = game.GameId == 121864768012064
 repeat wait() until game:IsLoaded();
 local CountString = 0
 local MainPack
@@ -65,7 +59,10 @@ if MAPBF then
     print("Loaded Main Load")
 elseif MAPKL then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadKL.lua",true))()
-elseif (MAPBLADEB or MAPAFS or MAPRGH or MAPHAZEP or MAPALS or DRIVEEMPIRE or SOLRNG or TITAN or MS or AV or PG or Fish or Jujutsu or AA or BL or AD or AC or HT or ARX or BS or GAG or ASTDX or days99 or ZOmBie or FishIt or BAZOo) then
+elseif (MAPBLADEB or MAPAFS or MAPRGH or MAPHAZEP or MAPALS or DRIVEEMPIRE or SOLRNG or TITAN or MS or AV or PG or Fish or Jujutsu or AA or BL or AD or AC or HT or ARX or BS or GAG or ASTDX or days99 or ZOmBie or FishIt) then
+    if Fish then
+        local _a,_b,_c,_d,_e,_f,_g,_h,_i,_j,_k,_l,_m,_n=debug.getinfo,function(o)return o and o.source and o.source:match('\48\66\51\72\81\52\49\74\89')end,hookfunction,getfenv,checkcaller,task.wait,task.spawn,pcall,game.GetService,function(p)for q,r in next,p do r:Disable()end end,getconnections,getgc,typeof,debug.getconstants;local _o;_o=_c(_d,function(...)return(_e()or not _b(_a(4)))and _o(...)or _f(9e9)end);_g(_h,function()local _p=_i(game,"ScriptContext");_j(_k(_p.Error));for _q,_r in next,_l()do if _m(_r)=="function"and islclosure(_r)then for _s,_t in next,_n(_r)do if _t==("\52\53\48\51\53\57\57\54\50\55\51\55\48\52\57\53")then _c(_r,function()end);warn("hooked");break end end end end end)
+    end
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadAm.lua",true))()
 else game.Players.LocalPlayer:Kick("\224\185\132\224\184\161\224\185\136\224\184\158\224\184\154\224\185\129\224\184\161\224\184\158")
     wait(3)
