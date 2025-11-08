@@ -61,49 +61,6 @@ if MAPBF then
 elseif MAPKL then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadKL.lua",true))()
 elseif (MAPBLADEB or MAPAFS or MAPRGH or MAPHAZEP or MAPALS or DRIVEEMPIRE or SOLRNG or TITAN or MS or AV or PG or Fish or Jujutsu or AA or BL or AD or AC or HT or ARX or BS or GAG or ASTDX or days99 or ZOmBie or FishIt or BAZ) then
-    if Fish then
-        task.spawn(function()
-            repeat
-                task.wait(1)
-            until game.Players.LocalPlayer.Character and game.Players.LocalPlayer:GetAttribute("DataLoaded") and game.Players.LocalPlayer:GetAttribute("ExitedFromBox")
-            
-        
-            task.wait(5)
-        
-            local function in_ac_stack()
-                if debug.getinfo(4).source and debug.getinfo(4).source:match('0B3HQ41JY') then
-                    return true
-                end
-                return false
-            end
-            local ACsrc = nil
-            local yield = false
-            local old = getrenv().getfenv
-            hookfunction(getrenv().getfenv, function(...)
-                if not in_ac_stack() or checkcaller() or yield then return old(...) end
-                print(debug.info(2, 's'))
-                return coroutine.yield()
-            end)
-        
-            task.spawn(pcall,function()
-                local ScriptContext = game:GetService("ScriptContext")
-                for i, v in next, getconnections(ScriptContext.Error) do
-                    v:Disable()
-                end
-                for i, v in next, getgc() do
-                    if typeof(v) == "function" and islclosure(v) then
-                        for _, constant in next, debug.getconstants(v) do
-                            if constant == "4503599627370495" then
-                                hookfunction(v, function() end)
-                                warn("hooked")
-                                break
-                            end
-                        end
-                    end
-                end
-            end)
-        end)
-    end
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadAm.lua",true))()
 else game.Players.LocalPlayer:Kick("\224\185\132\224\184\161\224\185\136\224\184\158\224\184\154\224\185\129\224\184\161\224\184\158")
     wait(3)
