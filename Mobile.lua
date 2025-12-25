@@ -30,6 +30,10 @@ if MAPBF then
         repeat task.wait() until LoadedBackUp
         repeat task.wait() until StatusCheckIsBad
         wait()
+         local old 
+old = hookfunction(hookmetamethod, function(a,i,w) 
+    return task.wait(9e9)
+end)   
         if _G.Script_Mode == "PVP"then 
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadP.lua",true))()
         elseif _G.Script_Language == "Thai"then 
