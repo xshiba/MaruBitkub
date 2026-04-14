@@ -30,8 +30,8 @@ if MAPBF then
         repeat task.wait() until LoadedBackUp
         repeat task.wait() until StatusCheckIsBad
         wait()
-        if _G.Script_Mode == "PVP"then 
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadP.lua",true))()
+        if getgenv().configs then 
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/b0439d26e2cbc2183d3276bae16918fc.lua"))()
         elseif _G.Script_Language == "Thai"then 
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadTh.lua",true))()
         elseif getgenv().Script_Mode == "Kaitun_Script"then 
@@ -44,8 +44,8 @@ if MAPBF then
     LoadedBackUp = true
     print("Loaded Backup Load")
     local ABC, CBA = pcall(function()
-        if _G.Script_Mode == "PVP"then 
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadP.lua",true))()
+        if getgenv().configs then 
+            loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/b0439d26e2cbc2183d3276bae16918fc.lua"))()
         elseif _G.Script_Language == "Thai"then 
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/CreamSoScute/main/LoadTh.lua",true))()
         elseif getgenv().Script_Mode == "Kaitun_Script"then 
