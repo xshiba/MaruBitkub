@@ -22,7 +22,7 @@ local ZOmBie = game.GameId == 7750955984
 local FishIt = game.GameId == 121864768012064
 local BAZ = game.GameId == 8066283370
 repeat wait() until game:IsLoaded();
-script_key=getgenv().key
+script_key=getgenv().Key
 local CountString = 0
 local MainPack
 local LoadedBackUp
